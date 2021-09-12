@@ -1,3 +1,8 @@
+// If the N = p1^k1 * p2^k2 * p3^k3 * .... * pn^kn
+// phi(N) = p1^k1*(1-1/p1) * p2^k2*(1-1/p2) * ... * pn^kn(1-1/pn) = N * (1-1/p1)*(1-1/p2)*(1-1/p3)* ... * (1-1/pn)
+
+// **** SUM OF TOTIENT OF DIVSOR OF ANY INTEGER N IS N
+
 int phi(int n){
     int res = n;
     for(int i=2;i*i<=n;i++){
@@ -13,7 +18,6 @@ int phi(int n){
         res /= n;
         res *= (n-1);
     }
-
     return res;
 }
 

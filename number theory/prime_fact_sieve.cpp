@@ -3,10 +3,10 @@ int a[N];
 
 void sieve(int n){
     memset(a,-1,N* sizeof(int));
-    for(int i=2;i<=n;i++){
+    for(int i=2;i<N;i++){
         if(a[i]==-1){
             a[i] = i;
-            for(int j=i*i;j<n;j+=i)
+            for(int j=i*i;j<N;j+=i)
                 a[j]=i;
         }
     }
