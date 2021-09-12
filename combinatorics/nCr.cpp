@@ -1,5 +1,5 @@
 // Time complexity - O(n)
-long long C(int n, int r) {
+long long nCr(int n, int r) {
     if(r > n - r) r = n - r; // because C(n, r) == C(n, n - r)
     long long ans = 1;
     int i;
@@ -31,7 +31,7 @@ void makeTriangle() {
     }
 }
 
-long long C(int n, int r) {
+long long nCr(int n, int r) {
     return triangle[n][r];
 }
 
@@ -39,7 +39,7 @@ long long C(int n, int r) {
 # define MAX 100
 long long row[MAX + 1];
 
-int C(int n, int r) {
+int nCr(int n, int r) {
     int i, j;
 
     // initialize by the first row
@@ -94,7 +94,7 @@ int nCr(int n,int r){
 // Modular Inversion technique
 // Time - O(n+k) and space - O(n)
 
-int binomialCoeff(int n, int r){
+int nCr(int n, int r){
     if (r > n)
         return 0;
     int m = 1000000007;
